@@ -88,6 +88,10 @@
 					
 					break;
 
+					case 27:  //esc
+						ul.html('');  //clear the list
+					break;
+
 					//some keys to ignore
 					case 93:
 					case 18:
@@ -136,7 +140,7 @@
 
 										//loop through the items and create some lis
 										for ( var i = 0; i < items.length; i++ ) { 
-											html += '<li data-id="'+items[i].id+'">'+items[i].value+'</li>';
+											html += '<li data-key="'+items[i].key+'">'+items[i].value+'</li>';
 										}
 
 										ul.html(html);  //fill the ul
@@ -152,7 +156,7 @@
 
 							//loop through the items and create some lis
 							for ( var i = 0; i < items.length; i++ ) {
-								html += '<li data-id="'+items[i].id+'">'+items[i].value+'</li>';
+								html += '<li data-key="'+items[i].key+'">'+items[i].value+'</li>';
 							}
 
 							ul.html(html);  //fill the ul
